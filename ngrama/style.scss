@@ -1,0 +1,219 @@
+$white : #ffffff;
+$gray: darken($white, 30);
+$blue: #347EED;
+$black: #000000;
+$med_blue: #47CCD6;
+$med_red: #ED174C;
+$dark_grey: #2c3139;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(http://weloveiconfonts.com/api/?family=entypo|zocial);
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+@mixin btn($background, $color) {
+  border: 3px solid rgba(255,255,255,0);
+  background: none;
+  color: $background;
+
+  border: 3px solid $background;
+  &:hover, &:focus, &:active {
+    color: $color;
+    border: 3px solid $background;
+    background: $background;
+    cursor: pointer;
+  }
+}
+
+@mixin primary_input( $type, $primary_color, $secondary_color, $is_required){
+  @if $type == 'text'{
+    margin-bottom: 40px;
+    
+    label{
+      font-family: 'Helvetica';
+      font-size: .8rem;
+      font-weight: 200;
+      color: rgba($secondary_color, .5);
+      display: block;
+      width: 100%;
+      padding-bottom: 5px;
+      
+      @if $is_required == true{
+        &:after{
+          content: '*';
+          color: rgba($med_red, .8);
+          margin: 0 0 0 5px;
+          
+        }
+      }
+    }
+    input{
+      width: calc( 100% - 26px);
+      padding: 8px 12px;
+      font-family: 'Helvetica';
+      font-size: 1rem;
+      font-weight: 400;
+      border: none;
+      border-bottom: 1px solid rgba($secondary_color, .5);
+      transition: all 200ms;
+    
+      &:focus{ border-color: $primary_color; }  
+    }
+    &.wrong{
+      label { color: rgba($med_red, .5); }
+      input {
+        border-bottom: 1px solid rgba($med_red, .5);;
+      }
+    }
+  }
+}
+
+*{
+  margin: 0;
+  outline: 0 !important;
+  text-decoration: none;
+}
+
+body {
+  background: $white; 
+}
+
+.ngram {
+  padding: 1em;
+}
+
+
+.process{
+  padding: 10px;
+  display: flex;
+  h1 {
+    font-family: sans-serif;
+    color: #347eed;
+    font-size: 1.5em;
+  }
+  h2 {
+    font-family: sans-serif;
+    font-size: 1.4em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    color: $gray;
+  }
+  .item-p{
+    flex: 1;
+    padding: 5px 16px;
+    box-shadow:0 6px 2px 0 rgba(0,0,0,.18), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
+    margin: 1em;
+    border-radius: 9px;
+  }
+  #arraysentences{
+    padding: 23px;
+    ul {
+      padding: 10px;
+    }
+    li {
+      display: inline;
+      font-family: sans-serif;
+      margin: 4px;
+      padding: 2px 10px;
+      border-radius: 7px;
+      background-color: #e8e8e8;
+    }
+    h3{
+      font-family: sans-serif;
+      color: #797979;
+      text-transform: capitalize;
+      font-size: 1em;
+    }
+    
+    li:hover {
+      box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.18), 0 4px 1px -2px rgba(0, 0, 0, 0.12), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+      
+    }
+  }
+
+}
+#wrapper {
+  width:500px;
+  margin:0 auto;
+  margin-top:40px;
+}
+
+#fileDropBox {
+  font-family: sans-serif;
+  color: $gray;
+  margin:20px 100px;;
+  width: 20em;
+  line-height: 10em;
+  border: 3px dashed $gray;
+  text-align: center;
+  background-color: $white;
+  border-radius: 7px;
+}
+
+em{font-style: italic}
+
+pre{
+  background: darken($white, 10);
+  padding: 1em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  border-radius: 2px;
+  font-size: 14px;
+  width: 100%;
+  font-family: lucida console, monospaced;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ngram-ngram {
+  background: $blue;
+  box-shadow: 0 6px 2px 0 rgba(0, 0, 0, 0.18), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  h1{
+    font-family: sans-serif;
+    color: #fff;
+    text-align: center;
+    opacity: .3;
+    font-size: 3em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+}
+.cont_input{
+  display: flex;
+  align-items: center;
+}
+.input_container{
+  &.text{ @include primary_input('text', $med_blue, $white, true); }
+}
+
+.btn {
+  padding: 1em;
+  line-height: 0em;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin: 3px;
+  &.-white {
+    @include btn(rgb(31, 47, 82), rgba(223, 223, 223, 0.575));
+  }
+  &.-hover {
+    @include btn(rgb(215, 222, 224), rgb(201, 200, 200));
+  }
+}

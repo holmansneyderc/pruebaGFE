@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Prueba GFE</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class='ngram ngram-ngram'>
+    <div id="wrapper">
+      <div id="fileDropBox">Arrastre el archivo .txt aquí.</div>
+      <div class="Container">
+        <div class="inner_container">
+          <div class="input_container text">
+            <label>Por favor ingresé dos palabras</label>
+            <div class="cont_input">
+              <input id="works" type="text" placeholder="Dos palabras">
+              <a id="btn" class="btn -white">Generar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="process">
+    <div class="item-p">
+      <h1>Texto original</h1>
+      <h2 id="resultado">
+    </div>
+    <div class="item-p">
+      <h1>Trigramas</h1>
+      <div id="arraysentences">
+      </div>
+    </div>
+    <div class="item-p">
+      <h1>Resultante</h1>
+      <h2 id="final_text">
+    </div>
+  </div>
+  </h2>
+  <script src="./script.js"></script>
+  <script src="./file.js"></script>
+</body>
+
+</html>

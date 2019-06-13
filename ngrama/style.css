@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(http://weloveiconfonts.com/api/?family=entypo|zocial);
+* {
+  margin: 0;
+  outline: 0 !important;
+  text-decoration: none;
+}
+
+body {
+  background: #ffffff;
+}
+
+.ngram {
+  padding: 1em;
+}
+
+.process {
+  padding: 10px;
+  display: flex;
+}
+.process h1 {
+  font-family: sans-serif;
+  color: #347eed;
+  font-size: 1.5em;
+}
+.process h2 {
+  font-family: sans-serif;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  color: #b3b3b3;
+}
+.process .item-p {
+  flex: 1;
+  padding: 5px 16px;
+  box-shadow: 0 6px 2px 0 rgba(0, 0, 0, 0.18), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  margin: 1em;
+  border-radius: 9px;
+}
+.process #arraysentences {
+  padding: 23px;
+}
+.process #arraysentences ul {
+  padding: 10px;
+}
+.process #arraysentences li {
+  display: inline;
+  font-family: sans-serif;
+  margin: 4px;
+  padding: 2px 10px;
+  border-radius: 7px;
+  background-color: #e8e8e8;
+}
+.process #arraysentences h3 {
+  font-family: sans-serif;
+  color: #797979;
+  text-transform: capitalize;
+  font-size: 1em;
+}
+.process #arraysentences li:hover {
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.18), 0 4px 1px -2px rgba(0, 0, 0, 0.12), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#wrapper {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+#fileDropBox {
+  font-family: sans-serif;
+  color: #b3b3b3;
+  margin: 20px 100px;
+  width: 20em;
+  line-height: 10em;
+  border: 3px dashed #b3b3b3;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+
+em {
+  font-style: italic;
+}
+
+pre {
+  background: #e6e6e6;
+  padding: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 2px;
+  font-size: 14px;
+  width: 100%;
+  font-family: lucida console, monospaced;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ngram-ngram {
+  background: #347EED;
+  box-shadow: 0 6px 2px 0 rgba(0, 0, 0, 0.18), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.ngram-ngram h1 {
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  opacity: 0.3;
+  font-size: 3em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.cont_input {
+  display: flex;
+  align-items: center;
+}
+
+.input_container.text {
+  margin-bottom: 40px;
+}
+.input_container.text label {
+  font-family: "Helvetica";
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+  width: 100%;
+  padding-bottom: 5px;
+}
+.input_container.text label:after {
+  content: "*";
+  color: rgba(237, 23, 76, 0.8);
+  margin: 0 0 0 5px;
+}
+.input_container.text input {
+  width: calc( 100% - 26px);
+  padding: 8px 12px;
+  font-family: "Helvetica";
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 200ms;
+}
+.input_container.text input:focus {
+  border-color: #47CCD6;
+}
+.input_container.text.wrong label {
+  color: rgba(237, 23, 76, 0.5);
+}
+.input_container.text.wrong input {
+  border-bottom: 1px solid rgba(237, 23, 76, 0.5);
+}
+
+.btn {
+  padding: 1em;
+  line-height: 0em;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  transition: border-color 0.2s ease-in-out, background 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin: 3px;
+}
+.btn.-white {
+  border: 3px solid rgba(255, 255, 255, 0);
+  background: none;
+  color: #1f2f52;
+  border: 3px solid #1f2f52;
+}
+.btn.-white:hover, .btn.-white:focus, .btn.-white:active {
+  color: rgba(223, 223, 223, 0.575);
+  border: 3px solid #1f2f52;
+  background: #1f2f52;
+  cursor: pointer;
+}
+.btn.-hover {
+  border: 3px solid rgba(255, 255, 255, 0);
+  background: none;
+  color: #d7dee0;
+  border: 3px solid #d7dee0;
+}
+.btn.-hover:hover, .btn.-hover:focus, .btn.-hover:active {
+  color: #c9c8c8;
+  border: 3px solid #d7dee0;
+  background: #d7dee0;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
